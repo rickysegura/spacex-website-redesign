@@ -33,7 +33,7 @@
       font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
 
-    .wrapper, #header {
+    .header {
       height: 100%;
     }
 
@@ -49,7 +49,7 @@
     .header-inner {
       position: absolute;
       top:0;
-      left:0;
+      right:0;
     }
 
     .navbar {
@@ -65,34 +65,51 @@
       text-decoration: underline;
       color:white;
     }
+
+    .header-description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: white;
+    }
   </style>
 </head>
-<body id="home">
-  <div class="wrapper">
-    <div id="header" class="section">
-      <div class="header-bg"></div>
+<body>
+  <div class="header">
+    <div class="header-bg"></div>
 
-      <div class="header-inner">
-        <a href="#"><img src="images/logo.png" alt="spacex" style="padding:15px;width:300px;float:left;"></a>
+    <div class="header-inner">
+      <nav class="navbar navbar-dark">
+        <a href="#" class="navbar-brand">
+          <img src="images/logo.png" alt="logo" width="100px;">
+        </a>
 
-        <nav class="navbar navbar-expand-sm">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#">Falcon 9</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Falcon Heavy</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Dragon</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Starship</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Human Spaceflight</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Rideshare</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Starlink</a></li>
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav bg-dark container">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Falcon 9</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Falcon Heavy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Dragon</a>
+            </li>
           </ul>
-        </nav>
-
-        <i class="fa fa-bars" style="float:right;"></i>
-      </div>
+        </div>
+      </nav>
     </div>
 
-    <div class="section">
-
+    <div class="header-description container">
+      <h2>RECENT LAUNCH</h2>
+      <h1>TRANSPORTER-5 MISSION</h1>
+      <button type="button" class="btn btn-light">REWATCH</button>
     </div>
   </div>
 </body>
